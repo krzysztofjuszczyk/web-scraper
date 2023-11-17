@@ -1,4 +1,4 @@
-package org.example;
+package org.otodom;
 
 import java.io.IOException;
 import java.util.List;

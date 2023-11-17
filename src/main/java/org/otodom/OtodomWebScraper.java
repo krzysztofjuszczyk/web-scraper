@@ -1,12 +1,10 @@
-package org.example;
+package org.otodom;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-import javax.print.Doc;
 import java.io.IOException;
-import java.lang.management.ThreadInfo;
 import java.util.List;
 import java.util.Optional;
 

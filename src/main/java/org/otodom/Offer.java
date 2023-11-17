@@ -1,8 +1,8 @@
-package org.example;
+package org.otodom;
 
 import java.util.List;
 
-public record Offer(String url, String name, String description, String address, String photoUrl) {
+record Offer(String url, String name, String description, String address, String photoUrl) {
 
     public boolean containsWord(List<String> blockListedWords) {
         return blockListedWords.stream()

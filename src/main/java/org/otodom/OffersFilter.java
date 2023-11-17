@@ -1,4 +1,4 @@
-package org.example;
+package org.otodom;
 
 import java.util.List;
 
