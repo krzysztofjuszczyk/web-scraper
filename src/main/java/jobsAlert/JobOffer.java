@@ -1,4 +1,4 @@
 package jobsAlert;
 
-public record JobOffer() {
+public record JobOffer(String url) {
 }

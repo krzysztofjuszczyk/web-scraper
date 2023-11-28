@@ -14,15 +14,26 @@ public class JJITScraper {
 
 // ?keyword=junior&keyword=nazwa
 
-    public List<JobOffer> getOffers() throws IOException {
+    public List<String> getOffers() throws IOException {
         Document doc = Jsoup.connect(baseURL).get();
 //        List<Element> searchTxts = doc.select("input[placeholder='Search'");
 //        Element searchTxt = searchTxts.get(0);
+        return getOffersLinksFromDocument(doc);
+//        Elements elements = doc.getElementsByAttributeValue("item","[object Object]");
+//        elements.forEach(e -> System.out.println(e.toString()));
+//        for (Element e :
+//                elements) {
+//
+//        }
+    }
 
-        Elements elements = doc.getElementsByAttributeValue("item","[object Object]");
-        elements.forEach(e -> System.out.println(e.toString()));
-
-        return null;
+    private static List<String> getOffersLinksFromDocument(Document document){
+        return document.getElementsByAttribute("href")
+                .stream()
+                .map(e -> e.attr("href"))
+                .map(href -> "https://justjoin.it/"+ href)
+                .toList()
+                ;
     }
 
 }

@@ -10,7 +10,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
         JJITScraper jjitScraper = new JJITScraper();
-        jjitScraper.getOffers();
+        List<String> jobOffers = jjitScraper.getOffers();
+        jobOffers.forEach(System.out::println);
+//        List<JobOffer> jobOffers = jjitScraper.getOffers();
+//        jobOffers.forEach(o -> System.out.println(o.url()));
     }
 
 
